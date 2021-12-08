@@ -4,7 +4,10 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "start": "lerna run start --stream"
+    "start": "lerna run start --stream",
+    "dc:up": "docker-compose up --build -d",
+    "dc:logs": "docker-compose logs -f",
+    "dc:down": "docker-compose down"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
