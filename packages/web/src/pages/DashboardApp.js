@@ -1,5 +1,6 @@
 // material
 import { Box, Grid, Container, Typography } from '@mui/material';
+import { useEffect } from 'react';
 // components
 import Page from '../components/Page';
 import {
@@ -16,15 +17,20 @@ import {
   AppCurrentSubject,
   AppConversionRates
 } from '../components/_dashboard/app';
-
+import useRiot from '../hooks/useRiot';
 // ----------------------------------------------------------------------
 
 export default function DashboardApp() {
+  const { sumonner, getSumonnerByName} = useRiot();
+  useEffect(() => {
+    getSumonnerByName('Predicting');
+  }, [])
+  console.log('sumonner', sumonner)
   return (
     <Page title="Dashboard | Minimal-UI">
       <Container maxWidth="xl">
         <Box sx={{ pb: 5 }}>
-          <Typography variant="h4">Hi, Welcome back</Typography>
+          <Typography variant="h4">Hi Guys, Welcome back</Typography>
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
