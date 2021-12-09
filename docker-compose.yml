@@ -2,6 +2,19 @@ version: "3.3"
 
 services:
 
+  web:
+    build: 
+      context: ./packages/web
+    env_file: ./packages/web/docker-compose.env
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    ports:
+      - "3100:3100"
+    stdin_open: true
+    volumes:
+      - ./packages/web/:/usr/src/web
+      - /usr/src/web/node_modules
+
   api:
     build:
       context: ./packages/server/
