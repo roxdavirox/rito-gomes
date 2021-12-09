@@ -76,7 +76,7 @@ export default function MatchHistory() {
                           <TableCell align="left">
                             <Label
                               variant="filled"
-                              color={(Boolean(win) && 'error') || 'success'}
+                              color={(Boolean(win) && 'success') || 'error'}
                             >
                               {win}
                             </Label>
