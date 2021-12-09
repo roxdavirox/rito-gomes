@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { getSumonner } from "../services/riot";
+import { getMatchHistory } from "../services/riot";
 
 const useRiot = () => {
-  const [sumonner, setSumonner] = useState({});
+  const [matchHistory, setMatchHistory] = useState({});
 
-  const getSumonnerByName = name => getSumonner(name).then(data => setSumonner(data));
+  const searchMatchHistoryByName = name => getMatchHistory(name).then(setMatchHistory);
   
-  return { sumonner, getSumonnerByName };
+  return { matchHistory, searchMatchHistoryByName };
 };
 
 export default useRiot;

@@ -6,7 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 //
-import App from './App';
+// import App from './App';
+import MatchHistory from './pages/MatchHistory';
 import * as serviceWorker from './serviceWorker';
 import reportWebVitals from './reportWebVitals';
 
@@ -15,7 +16,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <HelmetProvider>
     <BrowserRouter>
-      <App />
+      <MatchHistory />
     </BrowserRouter>
   </HelmetProvider>,
   document.getElementById('root')

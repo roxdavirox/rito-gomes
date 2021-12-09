@@ -8,7 +8,7 @@ import Register from './pages/Register';
 import DashboardApp from './pages/DashboardApp';
 import Products from './pages/Products';
 import Blog from './pages/Blog';
-import User from './pages/User';
+import MatchHistory from './pages/MatchHistory';
 import NotFound from './pages/Page404';
 
 // ----------------------------------------------------------------------
@@ -19,11 +19,11 @@ export default function Router() {
       path: '/dashboard',
       element: <DashboardLayout />,
       children: [
-        { element: <Navigate to="/dashboard/app" replace /> },
-        { path: 'app', element: <DashboardApp /> },
-        { path: 'user', element: <User /> },
-        { path: 'products', element: <Products /> },
-        { path: 'blog', element: <Blog /> }
+        { element: <Navigate to="/dashboard/user" replace /> },
+        // { path: 'app', element: <DashboardApp /> },
+        { path: 'history', element: <MatchHistory /> },
+        // { path: 'products', element: <Products /> },
+        // { path: 'blog', element: <Blog /> }
       ]
     },
     {

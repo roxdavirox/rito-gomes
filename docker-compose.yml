@@ -33,18 +33,6 @@ services:
       - "traefik.http.services.api-gw.loadbalancer.server.port=3000"
     networks:
       - internal
-
-  greeter:
-    build:
-      context: ./packages/server/
-    image: server
-    env_file: ./packages/server/docker-compose.env
-    environment:
-      SERVICES: greeter
-    depends_on:
-      - nats
-    networks:
-      - internal
   
   riot:
     build:

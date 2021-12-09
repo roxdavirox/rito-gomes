@@ -17,15 +17,9 @@ import {
   AppCurrentSubject,
   AppConversionRates
 } from '../components/_dashboard/app';
-import useRiot from '../hooks/useRiot';
-// ----------------------------------------------------------------------
 
 export default function DashboardApp() {
-  const { sumonner, getSumonnerByName} = useRiot();
-  useEffect(() => {
-    getSumonnerByName('Predicting');
-  }, [])
-  console.log('sumonner', sumonner)
+  
   return (
     <Page title="Dashboard | Minimal-UI">
       <Container maxWidth="xl">
@@ -33,6 +27,7 @@ export default function DashboardApp() {
           <Typography variant="h4">Hi Guys, Welcome back</Typography>
         </Box>
         <Grid container spacing={3}>
+          
           <Grid item xs={12} sm={6} md={3}>
             <AppWeeklySales />
           </Grid>
