@@ -4,7 +4,7 @@
   "description": "My Moleculer-based microservices project",
   "scripts": {
     "dev": "moleculer-runner --repl --hot services/**/*.service.js",
-    "start": "moleculer-runner",
+    "start": "moleculer-runner --repl --hot services/**/*.service.js",
     "cli": "moleculer connect NATS",
     "ci": "jest --watch",
     "test": "jest --coverage",
@@ -22,9 +22,10 @@
     "moleculer-repl": "^0.6.6"
   },
   "dependencies": {
+    "moleculer": "^0.14.16",
+    "moleculer-http-client": "^0.4.2",
     "moleculer-web": "^0.10.2",
-    "nats": "^2.2.0",
-    "moleculer": "^0.14.16"
+    "nats": "^2.2.0"
   },
   "engines": {
     "node": ">= 12.x.x"
