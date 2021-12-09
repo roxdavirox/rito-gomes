@@ -1,17 +1,10 @@
 import { Navigate, useRoutes } from 'react-router-dom';
-// layouts
 import DashboardLayout from './layouts/dashboard';
 import LogoOnlyLayout from './layouts/LogoOnlyLayout';
-//
 import Login from './pages/Login';
 import Register from './pages/Register';
-import DashboardApp from './pages/DashboardApp';
-import Products from './pages/Products';
-import Blog from './pages/Blog';
 import MatchHistory from './pages/MatchHistory';
 import NotFound from './pages/Page404';
-
-// ----------------------------------------------------------------------
 
 export default function Router() {
   return useRoutes([
@@ -20,10 +13,7 @@ export default function Router() {
       element: <DashboardLayout />,
       children: [
         { element: <Navigate to="/dashboard/user" replace /> },
-        // { path: 'app', element: <DashboardApp /> },
         { path: 'history', element: <MatchHistory /> },
-        // { path: 'products', element: <Products /> },
-        // { path: 'blog', element: <Blog /> }
       ]
     },
     {
